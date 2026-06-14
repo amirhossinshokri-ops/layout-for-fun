@@ -1,0 +1,144 @@
+:root{
+
+    --roboto-reg:'roboto-reg';
+
+    --roboto-med:'roboto-med';
+
+    --archivo:'archivo';
+
+    --dark:#3B3735;
+    --grey:#D2D2D2;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: var(--roboto-reg);
+    line-height: 1.6;
+}
+
+body a{text-decoration: none;}
+
+/* ===================
+   componnets
+=================== */
+.btn{
+
+
+}
+
+/* =================================
+        header
+================================= */
+
+header{
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70rem;
+    border-bottom-left-radius: 10rem ;
+    border-bottom-right-radius: 10rem ;
+}
+
+nav{
+padding-top: 2rem;
+}
+
+.nav__wraper{
+display: flex;
+align-items: center;
+}
+.logo{
+    display: block;
+width: 5.5rem;
+height: 5.5rem;
+    margin-right: 2rem;
+
+}
+.logo__img{
+    width: 100%;
+height: 100%;
+}
+
+/* ==========================
+       desktop menu
+========================== */
+
+.menu{
+    margin-left: 2rem;
+display: none;
+}
+.menu__items{
+    display: flex;
+    align-items: center;
+}
+.menu__item{
+margin-left: 2rem;
+}
+.menu__item_link{
+    font-size: 1.8rem;
+    color: var(--grey);
+
+}
+.menu__item_link--modif{
+    color: #fff;
+}
+
+/* =========================
+       mobile menu
+========================= */
+.mobile_menu{
+background-color: #3B3735;
+width:27rem ;
+top: 0;
+left: 0;
+bottom: 0;
+flex-grow: 1;
+position: absolute;
+
+}
+.mobile_menu__items{
+
+padding:4rem 3rem ;
+}
+.mobile_menu__item{ margin-bottom: 2rem;
+
+
+}
+.mobile_menu__item_link{color: #fff;
+
+
+}
+/* =================
+  desktop nav btn
+================ */
+.header__links{
+display: none;
+}
+.header__link{
+
+}
+
+/* ===============
+ mobile nav btn
+=============== */
+.navbtn{}
+.navebtn__line{}
