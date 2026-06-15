@@ -5,9 +5,12 @@
     --roboto-med:'roboto-med';
 
     --archivo:'archivo';
-
+--white:#fff;
     --dark:#3B3735;
     --grey:#D2D2D2;
+    --orange:#E76F51;
+    --kerem:#FAF4F2;
+    --pink:#F8E1DB
 }
 
 html{
@@ -49,7 +52,7 @@ body a{text-decoration: none;}
 ================================= */
 
 header{
-    background-image: url(../images/header-bg.jpg);
+    background-image:linear-gradient(rgba(59,55,53,.5),rgba(59,55,53,.5)), url(../images/header-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,6 +63,9 @@ header{
 
 nav{
 padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav__wraper{
@@ -94,51 +100,166 @@ display: none;
 margin-left: 2rem;
 }
 .menu__item_link{
+    transition: color 200ms ease-in;
+    
     font-size: 1.8rem;
     color: var(--grey);
-
+    font-size: 1.8rem;
+    font-family: var(--roboto-reg);
 }
+.menu__item_link:hover{color: var(--white);}
+
 .menu__item_link--modif{
     color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
 }
-
+.menu__item_link--modif::before{position: absolute ;
+content: " ";
+height: .3rem;
+width: 4rem;
+border-radius: .5rem;
+background-color: var(--orange);
+transform: rotate(45deg);
+z-index: -1;
+}
 /* =========================
        mobile menu
 ========================= */
 .mobile_menu{
-background-color: #3B3735;
+background-color:rgba(59, 55, 53, .9);
 width:27rem ;
 top: 0;
-left: 0;
+left: -27rem;
 bottom: 0;
 flex-grow: 1;
 position: absolute;
-
+transition: all 200ms ease-in-out;
+display: block;
 }
+.mobile_menu.active{left: 0;}
 .mobile_menu__items{
 
 padding:4rem 3rem ;
 }
 .mobile_menu__item{ margin-bottom: 2rem;
-
-
 }
+
 .mobile_menu__item_link{color: #fff;
-
-
+    position: relative;
+    
+    transition: all 200ms ease-in-out;
 }
+
+.mobile_menu__item_link:hover{
+    padding-left:2rem;
+}
+.mobile_menu__item_link::before{
+    transition: all 200ms ease-in-out;
+    position: absolute;
+    content: " ";
+    height: .4rem;
+    background-color: var(--orange);
+    width: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.mobile_menu__item_link:hover::before{width: 1.5rem;}
+
+
+.mobile_menu__links{display: flex;
+align-items: center;}
+.mobile_menu__link{
+    color: var(--white);
+display: block;
+padding: 1rem;
+border: 1px solid var(--white);
+margin-left: 2rem;
+border-radius: 2rem;
+transition: all 200ms ease-in-out;
+}
+.mobile_menu__link:hover{background-color: var(--grey);
+color: var(--orange);}
+
 /* =================
   desktop nav btn
 ================ */
 .header__links{
 display: none;
-}
-.header__link{
+align-items: center;
 
 }
+.header__link,.header__link--modif{display: block;
+        color: var(--white);
+display: block;
+padding: 1rem;
+margin-left: 2rem;
+border-radius: 2rem;
+font-size: 1.8rem;
+font-family: var(--roboto-med);
+}
+.header__link--modif{
+    padding: .5rem 3rem;
+
+    border: 1px solid var(--grey);}
 
 /* ===============
  mobile nav btn
 =============== */
-.navbtn{}
-.navebtn__line{}
+.navbtn{width: 5rem;
+height: 5rem;
+background-color: #fff;
+border-radius: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+z-index: 100;
+}
+
+.navebtn__line{
+    height: 3.2px;
+width: 3rem;
+background-color: var(--orange);
+border-radius: .5rem;
+position: relative;
+transition: all 200ms ease-in-out;
+}
+
+
+
+.navebtn__line::before,.navebtn__line::after{
+
+position: absolute;
+content: " ";
+height: 3.2px;
+width: 3rem;
+background-color: var(--orange);
+border-radius: .5rem;
+transition: all 200ms ease-in-out;
+
+}
+.navebtn__line::before{
+top: -8px;
+}
+.navebtn__line::after{
+top: +8px;
+}
+/* =======================
+   click event
+======================= */
+.navebtn__line.active{background-color: transparent;}
+
+.navebtn__line.active:before{
+
+transform:translateY(8px) rotate(45deg) ;
+
+}
+.navebtn__line.active::after{
+transform:   translateY(-8px) rotate(-45deg);
+}

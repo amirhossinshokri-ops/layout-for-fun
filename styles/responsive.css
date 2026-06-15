@@ -3,22 +3,27 @@
     .container{width: 100%;}
 }
 @media (min-width:480px) {
-        .container{width: 100%;}
-
+        .container{width: 100%;}        
+        
+        
 }
 @media (min-width:768px) {
         .container{width: 720px;}
-
+        .navbtn{display: none;}
+        .mobile_menu.active{display: none;}
+        .menu{display: flex;}
 }
 @media (min-width:992px) {
         .container{width: 960px;}
+        .header__links{display: flex;}
 
 }
 @media (min-width:1200px) {
         .container{width: 1140px;}
-
+        .menu__item{margin-left: 3rem;}
 }
 @media (min-width:1400px) {
         .container{width: 1320px;;}
+        .menu__item{margin-left: 4rem;}
 
 }
