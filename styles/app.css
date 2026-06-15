@@ -35,6 +35,7 @@ body{
     font-size: 1.6rem;
     font-family: var(--roboto-reg);
     line-height: 1.6;
+    background-color: var(--kerem);
 }
 
 body a{text-decoration: none;}
@@ -44,7 +45,16 @@ body a{text-decoration: none;}
 =================== */
 .btn{
 
+display: block;
 
+max-width: 18.5rem;
+height: 5rem;
+background-color: rgba(141, 141, 141, .8);
+border-radius: 10rem;
+color: #8D8D8D;
+line-height: 5rem;
+margin-left: auto;
+margin-right: auto;
 }
 
 /* =================================
@@ -262,4 +272,77 @@ transform:translateY(8px) rotate(45deg) ;
 }
 .navebtn__line.active::after{
 transform:   translateY(-8px) rotate(-45deg);
+}
+
+/* ==================
+  header caption
+================== */
+
+.header__content{
+padding: 8rem 0;
+text-align: center;
+color: var(--white);
+}
+.header__title{
+font-size: 4.5rem;
+font-family: var(--archivo);
+line-height: 1.4;
+max-width:34rem;
+margin:0 auto 2rem auto;
+
+}
+.header__caption{
+font-size: 1.8rem;
+font-family: var(--roboto-reg);
+max-width: 35rem;
+margin: 0 auto;
+}
+.header__btn{
+color: var(--white);
+background-color: var(--orange);
+
+margin: 3rem auto 0 auto;
+
+}
+main{
+padding: 4rem 0;}
+
+.services{
+display: flex;
+margin-top: -22rem;
+flex-wrap: wrap;
+margin-right: -1rem;
+margin-left: -1rem;
+}
+.service{
+    
+    text-align: center;
+display: flex;
+flex-direction: column;
+    justify-content: center;
+     align-items: center;
+    flex-grow: 1;
+    margin-right: 1rem;
+    margin-left: 1rem;
+width: 30rem;
+height: 26rem;
+background-color: var(--white);
+border-radius: 2rem;
+padding:0 1.5rem;
+margin-bottom: 2rem;
+}
+.service__banner{
+
+}
+.s-svg{
+display: block;
+}
+.service__title{
+font-family: var(--archivo);
+font-size: 1.8rem;
+    margin: 1.5rem 0 0.6rem 0;
+}
+.service__caption{
+color: #3B3735;
+max-width: 29rem;
 }
