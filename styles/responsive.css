@@ -2,7 +2,8 @@
 @media (max-width:380px) {
     .container{width: 100%;}
     .header__title{font-size: 3.2rem;}
-    .header__caption{font-size: 1.6rem;}
+    .header__caption{font-size: 1.5rem;}
+    .services{margin-top: -18rem;}
 }
 @media (min-width:480px) {
         .container{width: 100%;}        
