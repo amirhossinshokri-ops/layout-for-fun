@@ -4,7 +4,6 @@ template.innerHTML=`
     <link rel="stylesheet" href="./styles/app.css">
 
 
-<div class="destenation__place">
     <div class="destenation__place_banner">
 
       <img src="" alt="" class="destenation__place_img">
@@ -20,7 +19,7 @@ template.innerHTML=`
 <h3 class="destenation__place_title">The Hermitage Cabin</h3>
 <p class="destenation__place_caption">Book unique camping experiences on over 300,000 campsites.</p>
 <a href="#" class="destenation__place_btn btn">Read More</a>
-  </div>`
+  `
 
 
 class place extends HTMLElement{
