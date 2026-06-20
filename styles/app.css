@@ -16,6 +16,7 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *,*::after,*::before{
@@ -36,6 +37,7 @@ body{
     font-family: var(--roboto-reg);
     line-height: 1.6;
     background-color: #FAF4F2;
+    overflow-x: hidden;
 }
 
 body a{text-decoration: none;}
@@ -346,9 +348,7 @@ margin-left: -1rem;
     margin-right: 1rem;
     margin-left: 1rem;
 }
-.service__banner{
 
-}
 .s-svg{
 display: block;
 }
@@ -372,10 +372,7 @@ text-align: center;
 padding: 8rem 0;
 color: var(--dark);
 }
-.destenation__svg{
 
-
-}
 .destenation__title{
 font-size: 2.8rem;
 font-family: var(--archivo);
@@ -491,21 +488,39 @@ margin: 6rem 0;
 border-radius: 2rem;
 text-align: center;
     padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
 
 }
-.letter__content{
+.letter::before{
+    position: absolute;
+content: " ";
+right: 0;
+left: -15rem;
+top: 15rem;
+bottom: 0;
+background-image: url(../images/svgs/shape3.svg);
+background-repeat: no-repeat;
+background-size: contain;
+width: 50rem;
+height: 50rem;
+    z-index: 1;
+
 }
+.letter__content{z-index: 100;}
+.letter__banner{z-index: 100;}
 .letter__title{
     font-size: 3.8rem;
     font-family: var(--archivo);
     max-width: 22rem;
     margin:1rem auto;
     line-height: 1.2;
+
 }
 .letter__caption{
     
     margin: 1rem auto 2rem;
-;
+
 }
 
 form{   display: flex;
@@ -551,10 +566,7 @@ flex-shrink: 0;
 .letter__input__btn_svg{
     color: var(--white);
 }
-.letter__banner{
-    
-    
-}
+
 .letter__img{
     width: 100%;
 }
@@ -604,7 +616,6 @@ left: 0;
 margin: auto;
 
 }
-.footer__svg{}
 
 
 /* ====================
