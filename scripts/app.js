@@ -1,8 +1,8 @@
+import {place} from "../components/places/script/place.js"
+
 const btn=document.querySelector('.navbtn')
 const btnLine=document.querySelector('.navebtn__line')
 const mobile_menu=document.querySelector('.mobile_menu')
-
-const hearts=document.querySelectorAll('.destenation__place_svg')
 
 btn.addEventListener('click',()=>{
 
@@ -11,12 +11,13 @@ btn.addEventListener('click',()=>{
 
 })
 
-hearts.forEach(like => {
-    like.addEventListener('click',()=>{
-        like.classList.toggle('active')
-        
-        
-        
-    })
-    
-});
+
+
+
+
+
+
+
+window.customElements.define("makan-ha",place)
+
+
